@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do app</title>
+
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./main.js" defer></script>
+  </head>
+  <body>
+    <form data-todo-create>
+      <fieldset>
+        <label for="title">Title</label>
+        <input name="title" id="title" type="text" minlength="3" maxlength="50" required />
+      </fieldset>
+
+      <fieldset>
+        <label for="description">Description</label>
+        <textarea name="description" id="description" rows="4" cols="30" minlength="5" maxlength="1000" required></textarea>
+      </fieldset>
+
+      <fieldset>
+        <label for="url">Img url</label>
+        <input name="url" id="url" type="url" />
+      </fieldset>
+
+      <fieldset>
+        <label for="color">Color</label>
+        <input name="color" id="color" type="color" required />
+      </fieldset>
+
+      <button>Save</button>
+    </form>
+
+    <section>
+      <header>
+        <h2>Todo's:</h2>
+      </header>
+
+      <ul data-todo-list class="todo-container"></ul>
+
+      <template data-todo-template>
+        <li>
+          <article data-todo class="todo">
+            <h5 data-title></h5>
+            <p data-description></p>
+            
+            <img data-image height="100" width="150" />
+
+            <div>
+              <button data-edit>Edit</button>
+              <button data-delete>Delete</button>
+            </div>
+          </article>
+        </li>
+      </template>
+    </section>
+  </body>
+</html>
