@@ -1,0 +1,23 @@
+{
+  "name": "google-keep-univ",
+  "version": "1.0.0",
+  "description": "1. html, css, js 2. Form in order to create to do's    -> Title   -> Description    -> Img url   -> Completed   -> Color   -> Submit button & Cancel button 2.1. Save the todo in local storage 3. Create an html list -> based on saved todo's from local storage. 4. Add delete button to a todo -> Delete the item from local storage. 5. Edit -> Reuse create todo form in order to edit a todo -> update local storage with change todo",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "json-server --watch db.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/groszwilhelm/google-keep-univ.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/groszwilhelm/google-keep-univ/issues"
+  },
+  "homepage": "https://github.com/groszwilhelm/google-keep-univ#readme",
+  "dependencies": {
+    "json-server": "^1.0.0-alpha.23"
+  }
+}

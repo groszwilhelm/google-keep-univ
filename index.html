@@ -6,18 +6,34 @@
     <title>To Do app</title>
 
     <link rel="stylesheet" href="./styles.css" />
-    <script src="./main.js" defer></script>
+    <!-- <script src="./storage-functions.js" type="module" defer></script> -->
+    <script src="./main.js" type="module" defer></script>
   </head>
   <body>
     <form data-todo-create>
       <fieldset>
         <label for="title">Title</label>
-        <input name="title" id="title" type="text" minlength="3" maxlength="50" required />
+        <input
+          name="title"
+          id="title"
+          type="text"
+          minlength="3"
+          maxlength="50"
+          required
+        />
       </fieldset>
 
       <fieldset>
         <label for="description">Description</label>
-        <textarea name="description" id="description" rows="4" cols="30" minlength="5" maxlength="1000" required></textarea>
+        <textarea
+          name="description"
+          id="description"
+          rows="4"
+          cols="30"
+          minlength="5"
+          maxlength="1000"
+          required
+        ></textarea>
       </fieldset>
 
       <fieldset>
@@ -45,7 +61,7 @@
           <article data-todo class="todo">
             <h5 data-title></h5>
             <p data-description></p>
-            
+
             <img data-image height="100" width="150" />
 
             <div>
@@ -56,5 +72,51 @@
         </li>
       </template>
     </section>
+
+    <dialog data-dialog-edit>
+      <h2>Edit todo</h2>
+
+      <form data-todo-edit>
+        <!-- <input type="hidden" name="id" /> -->
+
+        <fieldset>
+          <label for="titleEdit">Title</label>
+          <input
+            name="title"
+            id="titleEdit"
+            type="text"
+            minlength="3"
+            maxlength="50"
+            required
+          />
+        </fieldset>
+
+        <fieldset>
+          <label for="descriptionEdit">Description</label>
+          <textarea
+            name="description"
+            id="descriptionEdit"
+            rows="4"
+            cols="30"
+            minlength="5"
+            maxlength="1000"
+            required
+          ></textarea>
+        </fieldset>
+
+        <fieldset>
+          <label for="urlEdit">Img url</label>
+          <input name="url" id="urlEdit" type="url" />
+        </fieldset>
+
+        <fieldset>
+          <label for="colorEdit">Color</label>
+          <input name="color" id="colorEdit" type="color" required />
+        </fieldset>
+
+        <button>Save</button>
+        <button data-close-dialog>Close</button>
+      </form>
+    </dialog>
   </body>
 </html>
